@@ -1,0 +1,88 @@
+footer{
+  width: 100%;
+  height: 480px;
+  background-color: #4d4d4d;
+  color:#fff;
+}
+footer .logo{
+  display: inline-block;
+  font-size: 20px;
+  border-bottom: 1px solid #fefefe;
+}
+footer .logo img{
+  margin-bottom: 10px;
+}
+footer .logo p{
+  height: 30px;
+  line-height: 30px;
+}
+.warrper{
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+.footer_top{
+  position: relative;
+  padding: 42px 0 50px;
+}
+.footer_top,.footer_bottom{
+  width: 1200px;
+  margin:0 auto;
+}
+.footer_bottom{
+  text-align: center;
+  padding-top: 30px;
+  font-size: 14px;
+}
+.footer_top .left{
+  width: 900px;
+  position: relative;
+  float: left;
+}
+.footer_top .right{
+  width: 300px;
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+}
+.footer_top .right li{
+  padding-left: 120px;
+  padding-bottom: 15px;
+}
+.cur{
+  padding-bottom: 0 !important;
+}
+.footer_top .line{
+  width: 2px;
+  height: 279px;
+  position: absolute;
+  bottom:0;
+  right: 0;
+}
+.footer_top .contact{
+  position: relative;
+  padding-top: 45px;
+}
+.footer_top .tel-address p{
+  padding-bottom: 30px;
+}
+.footer_top .tel-address a,.right a{
+  color:#fff;
+}
+.tel-address p:nth-child(4){
+  padding-bottom: 0;
+}
+.footer_top .contact a:hover,.right a:hover{
+  text-decoration: none;
+  color:#4d9feb;
+}
+/*二维码*/
+.QrCode{
+  width: 160px;
+  text-align: center;
+  position: absolute;
+  right: 130px;
+  bottom: 0px;
+}
+.QrCode p{
+  padding-top: 8px;
+}
