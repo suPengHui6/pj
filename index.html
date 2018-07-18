@@ -4,16 +4,54 @@
   <meta charset="UTF-8">
   <title>首页</title>
   <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="common/header.css">
   <link rel="stylesheet" href="common/footer.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+
 </head>
 <body>
+	<div id="header" class="nav-top"></div>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="img/banner/banner3.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="img/banner/banner1.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="img/banner/banner2.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="img/banner/banner4.jpg" alt=""></div>
+		</div>	
+		<div class="swiper-pagination"></div>	
+	</div>
   <div id="footer"></div>
 </body>
 <script src="./js/jquery.min.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/suction.js"></script>
 <script>
+	
+	var mySwiper = new Swiper ('.swiper-container', {
+		spaceBetween: 30,
+		centeredSlides: true,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+	})     
+	
+	
   $(function() {
-    // $('#header').load('common/header.html');
-    $("#footer").load('common/footer.html', function (data, status, xhr) {})
+    $('#header').load('common/header.html', function (data, status, xhr) {});
+    $("#footer").load('common/footer.html', function (data, status, xhr) {});
+			
   })
+	
+	
+	
+	  
+	
+	//吸顶条
+
 </script>
 </html>
