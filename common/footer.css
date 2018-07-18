@@ -1,22 +1,22 @@
-footer{
+.footer{
   width: 100%;
   height: 480px;
   background-color: #4d4d4d;
   color:#fff;
 }
-footer .logo{
+.footer .logo{
   display: inline-block;
   font-size: 20px;
   border-bottom: 1px solid #fefefe;
 }
-footer .logo img{
+.footer .logo img{
   margin-bottom: 10px;
 }
-footer .logo p{
+.footer .logo p{
   height: 30px;
   line-height: 30px;
 }
-.warrper{
+.footer .warrper{
   width: 100%;
   border-bottom: 1px solid #fff;
 }
@@ -34,21 +34,30 @@ footer .logo p{
   font-size: 14px;
 }
 .footer_top .left{
-  width: 900px;
+  width: 990px;
   position: relative;
   float: left;
 }
 .footer_top .right{
-  width: 300px;
+  width: 210px;
   position: absolute;
+  margin: 0;
   right: 0;
   bottom: 50px;
 }
 .footer_top .right li{
   padding-left: 120px;
+  text-align: left;
   padding-bottom: 15px;
 }
-.cur{
+.footer_top .right li a{
+  display: inline-block;
+  width: 71px;
+  float: right;
+  /*padding-left: 120px;*/
+  /*text-align: left;*/
+}
+.footer .cur{
   padding-bottom: 0 !important;
 }
 .footer_top .line{
@@ -64,6 +73,7 @@ footer .logo p{
 }
 .footer_top .tel-address p{
   padding-bottom: 30px;
+  margin: 0;
 }
 .footer_top .tel-address a,.right a{
   color:#fff;
@@ -85,4 +95,5 @@ footer .logo p{
 }
 .QrCode p{
   padding-top: 8px;
+  margin: 0;
 }
