@@ -7,40 +7,141 @@
 	<link rel="stylesheet" href="common/header.css">
   <link rel="stylesheet" href="common/footer.css">
 	<link rel="stylesheet" href="css/swiper.min.css">
-
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<div id="header" class="nav-top"></div>
-	<div class="swiper-container">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide"><img src="img/banner/banner3.jpg" alt=""></div>
-			<div class="swiper-slide"><img src="img/banner/banner1.jpg" alt=""></div>
-			<div class="swiper-slide"><img src="img/banner/banner2.jpg" alt=""></div>
-			<div class="swiper-slide"><img src="img/banner/banner4.jpg" alt=""></div>
-		</div>	
-		<div class="swiper-pagination"></div>	
-	</div>
-  <div id="footer"></div>
+		<!--头部-->
+		<div id="header" class="nav-top"></div>
+		<!--轮播图-->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/banner/banner3.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="img/banner/banner1.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="img/banner/banner2.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="img/banner/banner4.jpg" alt=""></div>
+			</div>	
+			<div class="swiper-pagination"></div>	
+		</div>
+		<!--核心业务-->
+		<div class="core_business">
+			<div class="pub_title">
+				<h2>核心业务</h2>
+				<p>一体化互联网+解决方案，让您的项目快速启动、完美落地！</p>
+			</div>
+			<div class="core_pics">
+				<ul class="">
+					<li><img src="img/home_service1.jpg" alt=""><a href="javascript:;">移动APP定制开发</a></li>
+					<li><img src="img/home_service2.jpg" alt=""><a href="javascript:;">微信公众号定制开发</a></li>
+					<li><img src="img/home_service3.jpg" alt=""><a href="javascript:;">小程序定制开发</a></li>
+					<li><img src="img/home_service4.jpg" alt=""><a href="javascript:;">网站定制开发</a></li>
+					<li><img src="img/home_servicemore.jpg" alt=""><a href="javascript:;"><span>了解更多业务 &gt;</span> </a></li>
+				</ul>
+			</div>	
+		</div>
+		<!--案例展示-->
+		<div class="case_shows">
+				<div class="pub_title">
+					<h2>案例展示</h2>
+				</div>
+				<div class="case_list">
+					<div class="case_swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case1.jpg" alt=""></div>
+							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case2.jpg" alt=""></div>
+							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case3.jpg" alt=""></div>
+							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case4.jpg" alt=""></div>
+							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case5.jpg" alt=""></div>
+							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case6.jpg" alt=""></div>
+							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case7.jpg" alt=""></div>
+							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case8.jpg" alt=""></div>
+						</div>	
+					</div>
+				</div>
+		</div>
+		<!--业务流程-->
+		<div class="business_process">
+			<div class="pub_title">
+				<h2>业务流程</h2>
+				<p>依托严谨的设计流程，支撑每一个项目</p>
+			</div>
+			<div class="business">
+				<ul>
+					<li>
+						<img src="img/process1.jpg" alt="">
+						<p>需求分析</p>
+					</li>
+					<li>
+						<img src="img/process2.jpg" alt="">
+						<p>产品原型</p>
+					</li>
+					<li>
+						<img src="img/process3.jpg" alt="">
+						<p>视觉设计</p>
+					</li>
+					<li>
+						<img src="img/process4.jpg" alt="">
+						<p>程序开发</p>
+					</li>
+					<li>
+						<img src="img/process5.jpg" alt="">
+						<p>系统测试</p>
+					</li>
+					<li>
+						<img src="img/process6.jpg" alt="">
+						<p>产品上线</p>
+					</li>
+					<li>
+						<img src="img/process7.jpg" alt="">
+						<p>客户验收</p>
+					</li>
+					<li>
+						<img src="img/process8.jpg" alt="">
+						<p>后期维护</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--底部-->
+		<div id="footer"></div>
 </body>
 <script src="./js/jquery.min.js"></script>
 <script src="./js/swiper.min.js"></script>
 <script src="./js/suction.js"></script>
 <script>
-	
+	//banner轮播图
 	var mySwiper = new Swiper ('.swiper-container', {
-		spaceBetween: 30,
+		spaceBetween: 0,
 		centeredSlides: true,
 		autoplay: {
 			delay: 3000,
 			disableOnInteraction: false,
 		},
+		loop: true,
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
 		},
 	})     
 	
+	//案例展示
+	var mySwiper2 = new Swiper ('.case_swiper-container', {
+			slidesPerView: 5,
+      spaceBetween: 10,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			loop: true,
+	})   
 	
+	//鼠标覆盖停止自动切换
+	mySwiper2.el.onmouseover = function(){
+		mySwiper2.autoplay.stop();
+	}
+	mySwiper2.el.onmouseout = function(){
+		mySwiper2.autoplay.start();
+	}
+	//引入头部和底部
   $(function() {
     $('#header').load('common/header.html', function (data, status, xhr) {});
     $("#footer").load('common/footer.html', function (data, status, xhr) {});

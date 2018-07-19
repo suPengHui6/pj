@@ -1,0 +1,139 @@
+.core_business,.business_process{
+	background:#fff;
+	padding:60px;
+}
+.pub_title{
+	text-align: center;
+}
+.pub_title>h2{
+	font-size:32px;
+}
+.pub_title>p{
+	color:#646464;
+	margin:10px 0 20px;
+}
+.core_pics{
+	text-align: center;
+}
+.core_pics>ul>li{
+	position:relative;
+	display:inline-block;	
+}
+
+@media screen and (max-width: 1920px) {
+	.core_pics>ul>li>img{
+		width:100%;
+	}
+	.core_pics>ul>li{
+		margin:10px;
+		width:256px;
+	}
+	.core_pics>ul>li>a{
+		line-height:256px;
+		font-size:24px;
+	}
+	.case_list .case_swiper-container .swiper-wrapper .swiper-slide img{
+		width:100%;
+	}
+	.business>ul>li>img{
+		width:140px;
+		height:140px;
+	}
+	.business>ul>li{
+		display:inline-block;
+		margin: 0 20px;
+		font-size: 20px;
+	}
+}
+@media screen and (max-width: 1366px) {
+	.core_pics>ul>li>img{
+		width:100%;
+	}
+	.core_pics>ul>li{
+		margin:5px;
+		width:166px;
+	}
+	.core_pics>ul>li>a{
+		line-height:166px;
+		font-size:16px;
+	}
+	.case_list .case_swiper-container .swiper-wrapper .swiper-slide img{
+		width:100%;
+	}
+	.business>ul>li>img{
+		width:100px;
+		height:100px;
+	}
+	.business>ul>li{
+		display:inline-block;
+		margin: 0 7px;
+		font-size:15px;
+	}
+}
+
+.core_pics>ul>li>a{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:100%;
+	height:100%;
+	margin-left:-50%;
+	margin-top:-50%;
+	color:#fff;
+	background:rgba(0,0,0,.5);
+	text-decoration: none;
+}
+.core_pics>ul>li>a:hover{
+	background:none;
+}
+.core_pics>ul>li:nth-child(5) a>span{
+	border:1px solid #fff;
+	padding:2px 6px;
+}
+
+.case_shows{
+	background:#f6f6f6;
+	padding-bottom:70px;
+}
+.case_shows .pub_title>h2{
+	padding:50px 0 40px;
+}
+.case_swiper-container{
+	width:100%;
+	margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+.case_list .case_swiper-container .swiper-wrapper .swiper-slide {
+	position:relative;
+}
+.case_list .case_swiper-container .swiper-wrapper .swiper-slide .case_mask{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+}
+.case_list .case_swiper-container .swiper-wrapper .swiper-slide:hover .case_mask{	
+	background:rgba(217,218,220,.5);
+	padding:10px;
+	left:-11px;
+	top:-10px;
+	
+}
+.business_process .pub_title{
+	padding-bottom:20px;
+}
+.business{
+	text-align: center;
+}
+.business>ul>li{
+	display:inline-block;
+}
+.business>ul>li>p{
+	margin:10px 0;
+}
+
