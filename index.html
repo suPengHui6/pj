@@ -34,7 +34,7 @@
 					<li><img src="img/home_service2.jpg" alt=""><a href="javascript:;">微信公众号定制开发</a></li>
 					<li><img src="img/home_service3.jpg" alt=""><a href="javascript:;">小程序定制开发</a></li>
 					<li><img src="img/home_service4.jpg" alt=""><a href="javascript:;">网站定制开发</a></li>
-					<li><img src="img/home_servicemore.jpg" alt=""><a href="javascript:;"><span>了解更多业务 &gt;</span> </a></li>
+					<li><img src="img/home_servicemore.jpg" alt=""><a href="core.html"><span>了解更多业务 &gt;</span> </a></li>
 				</ul>
 			</div>	
 		</div>
@@ -54,7 +54,9 @@
 							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case6.jpg" alt=""></div>
 							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case7.jpg" alt=""></div>
 							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case8.jpg" alt=""></div>
-						</div>	
+						</div>
+						<div class="swiper-button-prev" id="left"></div>
+						<div class="swiper-button-next" id="right"></div>
 					</div>
 				</div>
 		</div>
@@ -126,12 +128,16 @@
 	//案例展示
 	var mySwiper2 = new Swiper ('.case_swiper-container', {
 			slidesPerView: 5,
-      spaceBetween: 10,
+      spaceBetween: 20,
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
 			loop: true,
+			navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
 	})   
 	
 	//鼠标覆盖停止自动切换
