@@ -46,16 +46,21 @@
 	}
 }
 @media screen and (max-width: 1366px) {
-	.core_pics>ul>li>img{
-		width:100%;
-	}
+	
 	.core_pics>ul>li{
 		margin:5px;
 		width:166px;
+		overflow: hidden;
+		cursor:pointer;
 	}
 	.core_pics>ul>li>a{
 		line-height:166px;
 		font-size:16px;
+	}
+	.core_pics>ul>li>img{
+		width:100%;
+		transition: all 0.6s;
+		
 	}
 	.case_list .case_swiper-container .swiper-wrapper .swiper-slide img{
 		width:100%;
@@ -80,17 +85,32 @@
 	margin-left:-50%;
 	margin-top:-50%;
 	color:#fff;
-	background:rgba(0,0,0,.5);
+	background:rgba(0,0,0,.3);
 	text-decoration: none;
 }
-.core_pics>ul>li>a:hover{
+.core_pics>ul>li:hover a{
+	display:none;
 	background:none;
+}
+.core_pics>ul>li:nth-child(5):hover a{
+	display:inline-block;
+	background:none;
+	color:#007AFF;
+}
+.core_pics>ul>li:hover img{
+	transform:scale(1.15);//设置缩放比例
+	-ms-transform:scale(1.15);
+	-webkit-transform:scale(1.15);
+	-o-transform:scale(1.15);
+	-moz-transform:scale(1.15);
 }
 .core_pics>ul>li:nth-child(5) a>span{
 	border:1px solid #fff;
 	padding:2px 6px;
 }
-
+.core_pics>ul>li:nth-child(5):hover a>span{
+	background:#fff;
+}
 .case_shows{
 	background:#f6f6f6;
 	padding-bottom:70px;
@@ -111,18 +131,21 @@
 	position:relative;
 }
 .case_list .case_swiper-container .swiper-wrapper .swiper-slide .case_mask{
-	position:absolute;
+	/*position:absolute;
 	top:0px;
 	left:0px;
 	width:100%;
-	height:100%;
+	height:100%;*/
 }
 .case_list .case_swiper-container .swiper-wrapper .swiper-slide:hover .case_mask{	
-	background:rgba(217,218,220,.5);
+	/*background:rgba(217,218,220,.5);
 	padding:10px;
 	left:-11px;
-	top:-10px;
-	
+	top:-10px;*/
+}
+.case_list .case_swiper-container .swiper-wrapper .swiper-slide:hover img{
+	background:rgba(217,218,220,.5);
+	padding:10px;
 }
 .business_process .pub_title{
 	padding-bottom:20px;
@@ -136,4 +159,17 @@
 .business>ul>li>p{
 	margin:10px 0;
 }
-
+#left{
+	top: 140px;
+    left: 102px;
+	width: 44px;
+	background:url('../img/left.png') no-repeat;
+	background-size:100% 100%;
+}
+#right{
+	top: 140px;
+    right: 102px;
+	width: 44px;
+	background:url('../img/right.png') no-repeat;
+	background-size:100% 100%;
+}
