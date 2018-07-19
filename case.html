@@ -129,6 +129,7 @@
     }
     .case-item .rcodePart {
       position: relative;
+      min-height: 100px;
       padding-left: 120px;
       box-sizing: border-box;
       margin-top: 30px;
@@ -163,6 +164,11 @@
       width: 100%;
     }
     .case-item .rcodePart h4 {
+      position: absolute;
+      height: 30px;
+      line-height: 30px;
+      top:50%;
+      margin-top: -15px;
       font-size: 20px;
       color: #333;
       font-weight: normal;
@@ -197,10 +203,13 @@
   </style>
 </head>
 <body>
+  <!--  导航-->
   <div id="header" class="nav-top"></div>
+  <!-- banner -->
   <div class="banner">
     <img src="./img/banner/banner6.jpg" alt="">
   </div>
+  <!-- 案例类型 -->
   <div class="nav wrapper">
     <ul class="clearfix">
       <li>
@@ -223,8 +232,9 @@
       </li>
     </ul>
   </div>
+  <!-- 案例列表 -->
   <div class="case banner">
-    <div class="case-item odd animated fadeInUp">
+    <div class="case-item odd" data-anim="fadeInUp">
       <div class="wrapper clearfix">
       <div class="info">
         <div class="top">
@@ -237,7 +247,7 @@
         <div class="rcodePart">
           <div class="rcode"><img src="http://www.apppark.cn/qrcode.er?url=http://www.dundundc.net/app/10680981.html" alt="同城无忧" title=""></div>
           <h4>扫描左侧二维码下载</h4>
-          <a href="http://www.dundundc.net/app/10680981.html" class="link ui-btn orange large" target="_blank">查看详情</a>
+          <!-- <a href="http://www.dundundc.net/app/10680981.html" class="link ui-btn orange large" target="_blank">查看详情</a> -->
         </div>
       </div>
         <div class="images">
@@ -248,7 +258,7 @@
       </div>
       
     </div>
-    <div class="case-item even animated fadeInUp">
+    <div class="case-item even" data-anim="fadeInUp">
       <div class="wrapper clearfix">
           <div class="info">
             <div class="top">
@@ -260,7 +270,7 @@
             <div class="rcodePart">
               <div class="rcode"><img src="http://www.apppark.cn/qrcode.er?url=http://www.dundundc.net/app/10784805.html" alt="帮邻" title=""></div>
               <h4>扫描左侧二维码下载</h4>
-              <a href="http://www.dundundc.net/app/10784805.html" class="link ui-btn orange large" target="_blank">查看详情</a>
+              <!-- <a href="http://www.dundundc.net/app/10784805.html" class="link ui-btn orange large" target="_blank">查看详情</a> -->
             </div>
           </div>
           <div class="images">
@@ -271,10 +281,12 @@
       </div>
     </div>
   </div>
+  <!-- 尾部 -->
   <div id="footer"></div>
 </body>
 <script src="./js/jquery.min.js"></script>
 <script src="./js/suction.js"></script>
+<script src="./js/animate.js"></script>
 <script>
   $(function(){
     $("#header").load('common/header.html', function (data, status, xhr) {});
