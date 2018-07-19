@@ -2,22 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>核心业务</title>
+  <title>核心资质</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="common/footer.css">
   <link rel="stylesheet" href="common/header.css">
-  <style></style>
+  <style>
+    .banner img{
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <!--  导航-->
   <div id="header" class="nav-top"></div>
   <!-- banner -->
   <div class="banner">
-    <img src="./img/banner/banner6.jpg" alt="">
+    <img src="./img/banner/banner8.jpg" alt="">
   </div>
   <!-- 尾部 -->
   <div id="footer"></div>
 </body>
 <script src="./js/jquery.min.js"></script>
 <script src="./js/suction.js"></script>
+<script>
+  $(function(){
+    $("#header").load('common/header.html', function (data, status, xhr) {});
+    $("#footer").load('common/footer.html', function (data, status, xhr) {});
+  })
+</script>
 </html>
