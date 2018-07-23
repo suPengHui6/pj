@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>联系我们</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="common/header.css">
+	<link rel="stylesheet" href="common/footer.css">
+	<link rel="stylesheet" href="css/contactus.css">
+</head>
+<body>
+	<!--头部-->
+	<div id="header" class="nav-top"></div>
+	<div class="cloud_banner"><img src="img/banner/banner10.jpg" alt=""></div>
+	<!--提交需求-->
+	<div class="submission_requirements">
+		<div class="pub_title">
+			<h2>快速提交您的需求</h2>
+		</div>
+		<div class="submission_requirements_options">
+			<div class="submission_requirements_options_list">
+				<input type="text" class="fl-left" placeholder="您的姓名">
+				<input type="text" class="fl-right" placeholder="单位名称">
+				<input type="text" class="fl-left" placeholder="电话">
+				<input type="text" class="fl-right" placeholder="邮箱">
+				<div class="clear"></div>
+			</div>
+			<div class="submission_requirements_detail">
+				<textarea name="" placeholder="您的合作需求:请描述产品需求、功能规划、软件平台等" id=""  rows="10"></textarea>
+			</div>
+			<div class="submission_requirements_send">
+				<button type="button" class="fl-left">发送您的需求</button>
+				<p class="fl-right">我们会在24小时之内联系您。您也可以发送合作邮件至：<a href="mailto:pinjia99@126.com">pinjia99@126.com</a></p>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	
+	<!--底部-->
+	<div id="footer"></div>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/suction.js"></script>
+	<script>
+		//引入头部和底部
+		$(function() {
+			$('#header').load('common/header.html', function (data, status, xhr) {
+				//判断当前页面是哪个页面
+				$("#header #nav li").each(function() {
+					var id=$(this).attr('id');
+					if(id=='7') {
+						$(this).addClass("on");
+					}
+				})
+			});
+			$("#footer").load('common/footer.html', function (data, status, xhr) {});
+				
+		})
+		
+	</script>
+</body>
+</html>

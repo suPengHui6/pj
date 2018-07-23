@@ -6,201 +6,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="common/footer.css">
   <link rel="stylesheet" href="common/header.css">
-  <style>
-    .banner img{
-      width: 100%;
-    }
-    .wrapper{
-      width: 1200px;
-      margin: 0 auto;
-    }
-    .nav{
-      padding: 40px 0;
-    }
-    .nav ul a{
-      width: 138px;
-      height: 50px;
-      margin-right: 60px;
-      line-height: 48px;
-      border: 1px solid #646464;
-      text-align: center;
-      border-radius: 24px;
-      font-size: 16px;
-      float: left;
-      color:#646464;
-      text-decoration: none;
-    }
-    .nav ul a:hover{
-      color:#4d9feb;
-      border: 1px solid #4d9feb;
-    }
-    .case-item{
-      height: 550px;
-      overflow: hidden;
-    }
-    .case-item .odd{
-
-    }
-    .case-item.odd .info {
-      float: right;
-    }
-    .case-item .info {
-      float: left;
-      width: 480px;
-      padding: 30px 30px 0;
-    }
-    .case-item.odd .images {
-      float: left;
-    }
-    .case-item .images {
-      float: right;
-      width: 570px;
-      height: 512px;
-      position: relative;
-    }
-    .case-item .images .img {
-      position: absolute;
-      z-index: 50;
-      box-shadow: 0 -8px 28px rgba(0,0,0,.1);
-      border-radius: 4px;
-      overflow: hidden;
-    }
-    .case-item .images .img-1 {
-      width: 288px;
-      height: 512px;
-      top: 0;
-      left: 50%;
-      margin-left: -144px;
-      z-index: 100;
-    }
-    .case-item .images .img-2 {
-      width: 256px;
-      height: 454px;
-      top: 50%;
-      left: 0;
-      margin-top: -227px;
-    }
-    .images .img-3 {
-      width: 256px;
-      height: 454px;
-      top: 50%;
-      right: 0;
-      margin-top: -227px;
-    }
-    .case-item.odd .info {
-      float: right;
-    }
-
-    .case-item .info {
-      float: left;
-      width: 480px;
-      padding: 30px 30px 0;
-    }
-    .case-item .top {
-      position: relative;
-      height: 80px;
-      width: 100%;
-      padding: 0 0 0 90px;
-    }
-    .case-item .icon {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 80px;
-      height: 80px;
-      margin-bottom: 5px;
-      border-radius: 16px;
-      overflow: hidden;
-    }
-    .case-item .name {
-      font-size: 32px;
-      color: #464646;
-      padding: 5px 0 0;
-      font-weight: normal;
-      font-weight: normal;
-    }
-    .case-item .txt {
-      font-size: 16px;
-      color: #999;
-    }
-    .case-item .desc {
-      margin-top: 20px;
-      text-indent: 2em;
-    }
-    .case-item .rcodePart {
-      position: relative;
-      min-height: 100px;
-      padding-left: 120px;
-      box-sizing: border-box;
-      margin-top: 30px;
-      padding-top: 10px;
-    }
-    .case-item .rcodePart .rcode {
-      width: 100px;
-      height: 100px;
-      position: absolute;
-      left: 0px;
-      top: 0px;
-    }
-    .fadeInUp {
-      animation-name: fadeInUp;
-    }
-    .animated {
-      animation-duration: 1s;
-      animation-fill-mode: both;
-    }
-    @keyframes fadeInUp{
-      0% {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0);
-      }
-
-      100% {
-        opacity: 1;
-        transform: none;
-      }
-    }
-    .case-item .rcodePart .rcode img {
-      width: 100%;
-    }
-    .case-item .rcodePart h4 {
-      position: absolute;
-      height: 30px;
-      line-height: 30px;
-      top:50%;
-      margin-top: -15px;
-      font-size: 20px;
-      color: #333;
-      font-weight: normal;
-    }
-    .case-item .rcodePart a {
-      margin-top: 10px;
-    }
-
-    .ui-btn.large, .ui-btn-group.large .ui-btn {
-      padding: 10px 16px;
-      font-size: 14px;
-    }
-    .ui-btn.orange, .ui-btn-group.orange .ui-btn {
-      background-color: #ff6e03;
-      border-color: #ff6e03;
-      color: #fff;
-    }
-    .ui-btn {
-      display: inline-block;
-      padding: 6px 12px;
-      line-height: 18px;
-      border: 1px solid #ececec;
-      border-radius: 3px;
-      color: #464646;
-      background-color: #fff;
-      cursor: pointer;
-      vertical-align: middle;
-    }
-    .case-item.even {
-      background: #f9f9f9;
-    }
-  </style>
+  <link rel="stylesheet" href="css/case.css">
 </head>
 <body>
   <!--  导航-->
@@ -238,22 +44,22 @@
       <div class="wrapper clearfix">
       <div class="info">
         <div class="top">
-          <img class="icon" src="http://down.apppark.cn/app/update/user/533357/1501147653230_510281_114.png" alt="同城无忧" title="">
-          <h3 class="name">同城无忧</h3>
-          <p class="txt">同城无忧乐享生活</p>
+          <img class="icon" src="./img/project/caselogo1.png" alt="同城无忧" title="">
+          <h3 class="name">爱上农家乐</h3>
+          <p class="txt">一款更懂你的乡村旅游APP</p>
         </div>
-        <p class="desc">同城无忧是专门为手机用户量身订制的同城手机应用软件，为手机用户提供各种美食、休闲玩乐、生活用品、旅游等各类信息，并拥有在线商城、社区贴吧、信息公告等功能，提供优良的用户使用体验。相信您能在使用中，体验到我们作为APP制作运行商的用心及诚意。</p>
+        <p class="desc">爱上农家乐是全国首款“互联网+乡村旅游”O2O服务平台，乡村旅游攻略神器。集农家乐、客栈、名宿于一体，告诉您乡村游的正确打开方式，带您玩转不一样的乡村游。爱上农家乐，一款更懂你的乡村旅游APP。</p>
         
         <div class="rcodePart">
-          <div class="rcode"><img src="http://www.apppark.cn/qrcode.er?url=http://www.dundundc.net/app/10680981.html" alt="同城无忧" title=""></div>
+          <div class="rcode"><img src="./img/project/Android1.jpg" alt="同城无忧" title=""></div>
           <h4>扫描左侧二维码下载</h4>
           <!-- <a href="http://www.dundundc.net/app/10680981.html" class="link ui-btn orange large" target="_blank">查看详情</a> -->
         </div>
       </div>
         <div class="images">
-          <img class="img img-1" src="http://down.apppark.cn/app//upload/apply/10680981/10680981_1521012987293.png" alt="同城无忧" title="">
-          <img class="img img-2" src="http://down.apppark.cn/app//upload/apply/10680981/10680981_1521012987762.png" alt="同城无忧" title="">
-          <img class="img img-3" src="http://down.apppark.cn/app//upload/apply/10680981/10680981_1521012988007.png" alt="同城无忧" title="">
+          <img class="img img-1" src="./img/project/1.png" alt="爱上农家乐" title="">
+          <img class="img img-2" src="./img/project/3.png" alt="爱上农家乐" title="">
+          <img class="img img-3" src="./img/project/4.png" alt="爱上农家乐" title="">
         </div>
       </div>
       
@@ -289,7 +95,15 @@
 <script src="./js/animate.js"></script>
 <script>
   $(function(){
-    $("#header").load('common/header.html', function (data, status, xhr) {});
+    $("#header").load('common/header.html', function (data, status, xhr) {
+      //判断当前页面是哪个页面
+      $("#header #nav li").each(function() {
+        var id=$(this).attr('id');
+        if(id=='3') {
+          $(this).addClass("on");
+        }
+      })
+    });
     $("#footer").load('common/footer.html', function (data, status, xhr) {});
   })
 </script>

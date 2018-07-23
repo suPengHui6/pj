@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="common/header.css">
 	<link rel="stylesheet" href="common/footer.css">
-	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/cloudservice.css">
 </head>
 <body>
@@ -69,7 +68,7 @@
 								<p class="goods_pub">企业版安骑士</p>
 							</div>
 						</div>
-						<div class="goods_price">
+						<div class="goods_price second_goods_price">
 							<span>价格：13686元/年</span>
 						</div>
 					</div>
@@ -96,7 +95,7 @@
 								<p>内存：500G</p>
 							</div>
 						</div>
-						<div class="goods_price">
+						<div class="goods_price three_goods_price">
 							<span>价格：8325元/年</span>
 						</div>
 					</div>
@@ -123,7 +122,7 @@
 								<p>内存：500G</p>
 							</div>
 						</div>
-						<div class="goods_price">
+						<div class="goods_price four_goods_price">
 							<span>价格：12405元/年</span>
 						</div>
 					</div>
@@ -131,12 +130,13 @@
 			</ul>
 		</div>
 	</div>
+	<!--产品优势-->
 	<div class="product_advantage">
 		<div class="pub_title">
 			<h2>产品优势</h2>
 		</div>
 		<div class="product_advantage_content">
-			<div class="product_advantage_content_list fl-left">
+			<div class="product_advantage_content_list">
 				<div class="product_advantage_pic">
 					<img src="img/advantage1.png" alt="">
 				</div>
@@ -145,7 +145,7 @@
 					<p>实例可用性达99.95%，云盘数据可靠性不低于99.9999999% </p>
 				</div>
 			</div>
-			<div class="product_advantage_content_list fl-left">
+			<div class="product_advantage_content_list">
 				<div class="product_advantage_pic">
 					<img src="img/advantage2.png" alt="">
 				</div>
@@ -154,7 +154,7 @@
 					<p>自由配置 CPU、内存、带宽，可随时升级；升级配置数据不丢失，业务暂停时间可控</p>
 				</div>
 			</div>
-			<div class="product_advantage_content_list fl-left">
+			<div class="product_advantage_content_list">
 				<div class="product_advantage_pic">
 					<img src="img/advantage3.png" alt="">
 				</div>
@@ -163,7 +163,7 @@
 					<p>免费提供 DDoS 防护、木马查杀、防暴力破解等服务，可轻松实现多用户对多服务器的访问控制</p>
 				</div>
 			</div>
-			<div class="product_advantage_content_list fl-left">
+			<div class="product_advantage_content_list">
 				<div class="product_advantage_pic">
 					<img src="img/advantage4.png" alt="">
 				</div>
@@ -172,7 +172,7 @@
 					<p>高性价比，支持包年包月或按量计费，满足不同需求，无需服务器网络和硬件等维护，0 成本运维</p>
 				</div>
 			</div>
-			<div class="product_advantage_content_list fl-left">
+			<div class="product_advantage_content_list">
 				<div class="product_advantage_pic">
 					<img src="img/advantage5.png" alt="">
 				</div>
@@ -181,7 +181,7 @@
 					<p>丰富的操作系统和应用软件，通过镜像可一键简单部署，同一镜像可在多台 ECS 中快速复制环境，轻松扩展</p>
 				</div>
 			</div>
-			<div class="product_advantage_content_list fl-left">
+			<div class="product_advantage_content_list">
 				<div class="product_advantage_pic">
 					<img src="img/advantage6.png" alt="">
 				</div>
@@ -193,17 +193,31 @@
 			<div class="clear"></div>
 		</div>
 	</div>
+	<div class="product_advantage_introudce">
+		<div class="product_advantage_introudce_content">
+			<p>我们既是阿里云城市服务商，更是阿里云核心合作伙伴，为阿里云的用户提供增值服务和购买指导。</p>
+			<p>让您拥有独立的阿里云账号，享受阿里云大客户的至尊服务。</p>
+			<p>品佳科技期待成为您的贴身上云顾问。</p>
+		</div>
+	</div>
 	<!--底部-->
 	<div id="footer"></div>
 	
 	<script src="./js/jquery.min.js"></script>
-	<script src="./js/swiper.min.js"></script>
 	<script src="./js/suction.js"></script>
 	<script src="./js/animate.js"></script>
 	<script>
 		//引入头部和底部
 		$(function() {
-			$('#header').load('common/header.html', function (data, status, xhr) {});
+			$('#header').load('common/header.html', function (data, status, xhr) {
+				//判断当前页面是哪个页面
+				$("#header #nav li").each(function() {
+					var id=$(this).attr('id');
+					if(id=='4') {
+						$(this).addClass("on");
+					}
+				})
+			});
 			$("#footer").load('common/footer.html', function (data, status, xhr) {});
 				
 		})

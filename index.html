@@ -46,18 +46,20 @@
 				<div class="case_list">
 					<div class="case_swiper-container">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case1.jpg" alt=""></div>
-							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case2.jpg" alt=""></div>
-							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case3.jpg" alt=""></div>
-							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case4.jpg" alt=""></div>
-							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case5.jpg" alt=""></div>
-							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case6.jpg" alt=""></div>
-							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case7.jpg" alt=""></div>
-							<div class="swiper-slide"><div class="case_mask"></div><img src="img/home_case8.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/home_case1.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/home_case2.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/home_case3.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/home_case4.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/home_case5.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/home_case6.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/home_case7.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/home_case8.jpg" alt=""></div>
 						</div>
-						<div class="swiper-button-prev" id="left"></div>
-						<div class="swiper-button-next" id="right"></div>
+						<div class="swiper-button-prev swiper-button-prev-pub" id="left"><img src="img/left.png" alt=""></div>
+						<div class="swiper-button-next swiper-button-prev-pub" id="right"><img src="img/right.png" alt=""></div>
 					</div>
+				<!--	<div class="case_list_left case_list-pub"><img src="img/left.png" alt=""></div>
+					<div class="case_list_right case_list-pub"><img src="img/right.png" alt=""></div>-->
 				</div>
 		</div>
 		<!--业务流程-->
@@ -110,6 +112,10 @@
 <script src="./js/swiper.min.js"></script>
 <script src="./js/suction.js"></script>
 <script>
+	
+	
+	
+	
 	//banner轮播图
 	var mySwiper = new Swiper ('.swiper-container', {
 		spaceBetween: 0,
@@ -149,8 +155,19 @@
 	}
 	//引入头部和底部
   $(function() {
-    $('#header').load('common/header.html', function (data, status, xhr) {});
+    $('#header').load('common/header.html', function (data, status, xhr) {
+			//判断当前页面是哪个页面
+			$("#header #nav li").each(function() {
+				var id=$(this).attr('id');
+				if(id=='1') {
+					$(this).addClass("on");
+				}
+			})
+		});
     $("#footer").load('common/footer.html', function (data, status, xhr) {});
+		
+		
+		
 			
   })
 	

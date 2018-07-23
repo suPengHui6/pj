@@ -7,105 +7,7 @@
   <link rel="stylesheet" href="common/footer.css">
   <link rel="stylesheet" href="common/header.css">
   <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <style>
-    .excellent-case{
-      max-width: 1724px;
-      margin:25px auto;
-    }
-    .excellent-case>div{
-      padding: 0 10px
-    }
-    .link-case{
-      position: relative;
-      display: block;
-      vertical-align: middle;
-      margin: 20px auto 25px auto;
-      width: 90%;
-      padding-top: 100%;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      overflow: hidden !important;
-    }
-    .active{
-      transform: scale(1.1) !important;
-      transition: all .3s ease-out !important;
-    }
-    .link-case>div{
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      transform: scale(1);
-      transition: all .3s ease-out;
-    }
-    .link-case>div>p{
-      width: 100%;
-      height: 60px;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      margin: 0;
-      background-color: #000;
-      opacity: 0.5;
-      overflow: hidden;
-      color:#fff;
-    }
-    .link-case>div>p span{
-      width: 100%;
-      display: block;
-    }
-    .link-case>div>p .link-case-title{
-      height: 60px;
-      line-height: 60px;
-    }
-    .link-case-des{
-      width: 60% !important;
-      margin: 20px auto 0 auto;
-      font-size: 12px;
-      text-align: justify;
-    }
-    .service_title{
-      padding-top: 40px;
-      text-align: center;
-    }
-    .service_title p{
-      margin:0;
-    }
-    .service_title h5{
-      font-size:40px;
-    }
-    .hidden {
-      visibility: hidden;
-      filter: alpha(opacity=0);
-      opacity: 0;
-    }
-    .fadeInUp {
-      animation-name: fadeInUp;
-    }
-    .animated {
-      animation-duration: 1s;
-      animation-fill-mode: both;
-    }
-    @keyframes fadeInUp{
-      0% {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0);
-      }
-
-      100% {
-        opacity: 1;
-        transform: none;
-      }
-    }
-    .banner img{
-      width: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="css/core.css">
 </head>
 <body>
   <div id="header" class="nav-top"></div>
@@ -209,13 +111,23 @@
 <script>
   $(function() {
     // 引入公共尾部
-    $("#header").load('common/header.html', function (data, status, xhr) {});
+    $("#header").load('common/header.html', function (data, status, xhr) {
+      //判断当前页面是哪个页面
+      $("#header #nav li").each(function() {
+        var id=$(this).attr('id');
+        if(id=='2') {
+          $(this).addClass("on");
+        }
+      })
+    });
     $("#footer").load('common/footer.html', function (data, status, xhr) {});
     // 鼠标移到核心业务效果
     $('.excellent-case a div').hover(function(){
-      $(this).addClass('active').children('p').stop().animate({height:'96%'},300)
+      $(this).addClass('active').children('p').stop().animate({height:'96%'},300);
+      $(this).children('p').children('.link-case-title').addClass('tit-cur');
     },function(){
       $(this).removeClass('active').children('p').stop().animate({height:'60px'},300);
+      $(this).children('p').children('.link-case-title').removeClass('tit-cur');
     })
   })
 </script>

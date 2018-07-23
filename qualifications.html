@@ -6,11 +6,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="common/footer.css">
   <link rel="stylesheet" href="common/header.css">
-  <style>
-    .banner img{
-      width: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="css/qualifications.css">
 </head>
 <body>
   <!--  导航-->
@@ -19,6 +15,10 @@
   <div class="banner">
     <img src="./img/banner/banner8.jpg" alt="">
   </div>
+  <div class="lists">
+    <ul class="clearfix">
+    </ul>
+  </div>
   <!-- 尾部 -->
   <div id="footer"></div>
 </body>
@@ -26,8 +26,33 @@
 <script src="./js/suction.js"></script>
 <script>
   $(function(){
-    $("#header").load('common/header.html', function (data, status, xhr) {});
+    $("#header").load('common/header.html', function (data, status, xhr) {
+        //判断当前页面是哪个页面
+      $("#header #nav li").each(function() {
+        var id=$(this).attr('id');
+        if(id=='5') {
+          $(this).addClass("on");
+        }
+      })
+    });
     $("#footer").load('common/footer.html', function (data, status, xhr) {});
+    var lists = ['质量管理体系证书','3C认证证书','智能电子回单系统软件V1.0','智慧旅游系统软件V1.0','智慧金融自助服务系统软件V1.0','多媒体信息发布系统软件V1.0','基于物联网的土地深松检测管理系统V1.3','网络爬虫的农产品价格获取与分析系统V2.0','基于北斗差分的土地流转管理系统V2.1','基于Libs的实时测土配方施肥系统V1.1','自助网银系统软件V1.0','智能锁系统软件V1.0','智能钥匙系统软件V1.0','移动客户端软件V1.0','水务信息一体化综合管理平台V1.0','综合评议系统管理平台V1.0','基于物联网的水产养殖监测分析平台V1.0','智慧园区服务品台V1.0','爱农云服务品台V1.0','智慧后勤服务管理平台V1.0','农业物联网信息溯源平台V1.0','发明专利','实用新型专利','外观设计专利证书','华为云证书','自助选号系统软件V1.0','电子智能排队叫号系统软件V1.0','电子评价管理系统软件V1.0','自助营业系统软件V1.0','软件企业证书'];
+    var li = $('.lists ul');
+    li.one('add', function() {
+      console.log(lists.length)
+      var num = lists.length;
+      var timer = null;
+      var picNum = 0
+      timer = setInterval(function() {
+          picNum++
+          console.log(picNum)
+          var li_str = '<li style = "opacity: 0;"><img src="./img/qualification/qua'+(picNum)+'.jpg" alt=""><p>'+lists[picNum-1]+'</p></li>'
+          num <= 1 ? clearTimeout(timer) : ''
+          li.append(li_str).find('li').animate({ 'opacity': 1, 'top': 0 }, 80)
+              --num
+      }, 200)
+    })
+    li.trigger('add'); 
   })
 </script>
 </html>

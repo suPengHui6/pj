@@ -2,181 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>核心资质</title>
+  <title>关于品佳</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="common/footer.css">
   <link rel="stylesheet" href="common/header.css">
-  <style>
-    .banner img{
-      width: 100%;
-    }
-    @media screen and (max-width: 1920px) {
-      .wrapper{
-        width: 1400px;
-        margin:0 auto;
-      }
-      .content .left{
-        width: 675px;
-        height: 220px;
-        position: relative;
-      }
-      .content .left ul{
-        width: 650px;
-        height: 220px;
-        border: 1px solid #868686;
-      }
-      .content .left>div{
-        width: 70px;
-        height: 50px;
-        position: absolute;
-        right: 0;
-        bottom: 12px;
-        background-color: #4d9feb;
-      }
-      .pictrues-list .left{
-        width: 950px;
-        float: left;
-      }
-      .pictrues-list .right{
-        width: 450px;
-        float: right;
-      }
-      .pictrues-list .left li{
-        width: 450px;
-        height: 280px;
-        float: left;
-        margin:0 25px 25px 0;
-      }
-      .btm li{
-        width: 450px;
-        height: 360px;
-        margin:0 25px 25px 0;
-        float: left;
-      }
-    }
-    @media screen and (max-width: 1366px) {
-      .wrapper{
-        width: 1200px;
-        margin:0 auto;
-      }
-      .content .left{
-        width: 575px;
-        height: 220px;
-        position: relative;
-      }
-      .content .left>ul{
-        width: 550px;
-        height: 220px;
-        border: 1px solid #868686;
-      }
-      .content .left>div{
-        width: 70px;
-        height: 50px;
-        position: absolute;
-        right: 0;
-        bottom: 12px;
-        background-color: #4d9feb;
-      }
-      .pictrues-list .left{
-        width: 810px;
-        float: left;
-      }
-      .pictrues-list .right{
-        width: 390px;
-        height: 500px;
-        float: right;
-      }
-      .pictrues-list .right li{
-        width: 390px;
-        height: 500px;
-      }
-      .pictrues-list .left li{
-        width: 390px;
-        height: 242px;
-        position: relative;
-        float: left;
-        margin:0 15px 15px 0;
-      }
-      .btm li{
-        width: 390px;
-        height: 312px;
-        margin:0 15px 15px 0;
-        float: left;
-      }
-      .btm li:nth-child(3){
-        margin-right: 0 !important;
-      }
-    }
-    .content .left li span{
-      font-size: 54px;
-      color:#4d9feb;
-    }
-    .content .left li p{
-      color:#868686;
-    }
-    .content div{
-      width: 50%;
-    }
-    .content .left{
-      margin-top: 6px;
-      float: left;
-    }
-    .content .right{
-      float: right;
-    }
-    .content .right p{
-      padding-bottom: 20px;
-      font-size: 16px;
-    }
-    .wrapper h5{
-      padding: 70px 0 80px 0;
-      font-size: 38px;
-      text-align: center;
-    }
-    .content .left ul li{
-      width: 33.33%;
-      text-align: center;
-      float: left;
-      padding-top: 60px;
-    }
-    /*合作*/
-    .cooperate{
-      width: 100%;
-      height: 940px;
-      background-color: #f4f8fb;
-    }
-    .cooperate h5,.team h5{
-      padding-top: 84px;
-      font-size: 38px;
-      text-align: center;
-    }
-    .cooperate p,.team .p1{
-      text-align: center;
-      padding: 20px 0;
-    }
-    .team{
-      padding-bottom: 50px;
-    }
-    .team .p1{
-      text-align: center;
-      padding: 20px 0 10px 0;
-    }
-    .logo-list{
-      width: 100%;
-    }
-    .logo-list li{
-      width: 16%;
-      float: left;
-      margin-right: 0.8%;
-      margin-bottom:0.8%;
-    }
-    .logo-list img{
-      width: 100%;
-    }
-    .logo-list li:nth-child(6n){
-      margin-right: 0 !important;
-    }
-  </style>
+  <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
   <!--  导航-->
@@ -219,10 +49,7 @@
     <h5>因为努力和真诚，他们选择了我们</h5>
     <p>我们熟悉客户的环境，了解客户的需求，以专业的精神，为客户提供专业化的服务。</p>
     <div class="wrapper">
-      <ul class="logo-list">
-        <li>
-          <img src="./img/customer/logo1.jpg" alt="">
-        </li>
+      <ul class="logo-list clearfix">
       </ul>
     </div>
   </div>
@@ -258,7 +85,15 @@
 <script src="./js/suction.js"></script>
 <script>
   $(function(){
-    $("#header").load('common/header.html', function (data, status, xhr) {});
+    $("#header").load('common/header.html', function (data, status, xhr) {
+        //判断当前页面是哪个页面
+      $("#header #nav li").each(function() {
+        var id=$(this).attr('id');
+        if(id=='6') {
+          $(this).addClass("on");
+        }
+      })
+    });
     $("#footer").load('common/footer.html', function (data, status, xhr) {});
     $("#nub").html(0);
     $("#nub1").html(0);
@@ -301,14 +136,14 @@
     li.one('add', function() {
       var num = 30;
       var timer = null;
-      var picNum = 1;
+      var picNum = 0;
       timer = setInterval(function() {
           picNum++;
-          var li_str = '<li style = "opacity: 0;"><img src="./img/customer/logo'+(picNum)+'.jpg" alt=""></li>'
-          num <= 1 ? clearTimeout(timer) : ''
-          li.append(li_str).find('li').animate({ 'opacity': 1, 'top': 0 }, 200)
+          var li_str = '<li style="background:url(./img/customer/logo'+picNum+'.jpg) center center"></li>'
+          num <= 0 ? clearTimeout(timer) : ''
+          li.append(li_str).find('li').animate({ 'opacity': 1, 'top': 0 }, 60)
               --num
-      }, 200)
+      }, 140)
     })
     li.trigger('add'); 
   })
