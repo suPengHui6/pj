@@ -10,54 +10,84 @@
 		margin:0 20px;
 	}
 	.product_list_content .goods_plan{
-			padding:25px 20px 10px;		
+			padding:30px 20px 10px;		
 	}
-	.goods_plan_list,.goods_detail,.goods_price{
-			font-size:24px;
+	.goods_plan_list,.goods_detail{
+			font-size:18px;
+	}
+	.goods_detail{
+		height:216px;
 	}
 	.goods_plan_list{
 		padding: 20px 0 16px;
 	}
+	.goods_price>span {
+	    font-weight: bold;
+	    font-size: 24px;
+	}
 	.goods_detail>ul>li{
 		line-height:34px;
+		font-weight: lighter;
 	}
 	.goods_plan>h3{
-		font-size:26px;
+		font-size:20px;
 	}
 	.memory{
 		padding:16px;
 	}
-	.first_goods_price{
-		margin-top:68px;
+	.goods_plan_list>li:nth-child(1){
+			padding: 0px 0 10px;
 	}
 	.pub_title>h2{
 		font-size:32px;
 	}
 	.product_advantage_pic{
+		display: inline-block;
 		width:350px;
 		height:180px;
 		background:url('../img/box1.png') no-repeat;
 		background-size:100% 100%;
 		text-align: center;
 	}
+	.product_advantage_pic:hover{
+		width:350px;
+		height:180px;
+		background:url(../img/box2.png) no-repeat;
+		background-size:100% 100%;
+		text-align: center;
+		display: inline-block;
+	}
 	.product_advantage_pic>img{
 		width: 132px;
-    height: 132px;
-    margin-top: 20px;
+    	height: 132px;
+    	margin-top: 20px;
 	}
-	.product_advantage_content_list{
-		margin:67px;
-	}
+	
 	.product_advantage_desc>p{
 		width:350px;
 	}
 	.product_advantage_desc>p{
-		font-size: 21px;
-    line-height: 33px;
+		font-size: 16px;
+    	line-height: 24px;
 	}
 	.product_advantage_desc>h3{
 		font-size:25px;
 	}
+	.product_advantage_introudce{
+		width:100%;
+		height:480px;
+		background:url(../img/bg5.jpg) no-repeat;
+		background-size:100% 100%;
+		text-align: center;
+	}
+	.product_advantage_introudce_content{
+		padding: 180px 0;
+    font-size: 26px;
+    line-height: 40px;
+	}
+	
+	
+	
 	
 }
 @media screen and (max-width: 1366px) {
@@ -70,6 +100,9 @@
 	}
 	.cloud_product_list>ul>li{
 		margin:0 10px;
+	}
+	.goods_plan_list>li:nth-child(1){
+			padding: 0px 0 3px;
 	}
 	.product_list_content .goods_plan{
 			padding:16px 20px 10px;		
@@ -90,7 +123,14 @@
 		padding:12px 18px;
 	}
 	.first_goods_price{
-		margin-top:46px;
+		/*margin-top:46px;*/
+	}
+	.goods_detail {
+	    height: 115px;
+	}
+	.goods_price>span {
+	    font-weight: bold;
+	    font-size: 15px;
 	}
 	.pub_title>h2{
 		font-size:24px;
@@ -100,29 +140,52 @@
 	}
 	.product_advantage_pic{
 		width: 218px;
-    height: 98px;
+    	height: 98px;
 		background:url('../img/box1.png') no-repeat;
+		background-size:100% 100%;
+		text-align: center;
+	}
+	.product_advantage_pic:hover{
+		width: 218px;
+		height: 98px;
+		background:url(../img/box2.png) no-repeat;
 		background-size:100% 100%;
 		text-align: center;
 	}
 	.product_advantage_pic>img{
 		width: 80px;
-    height: 80px;
-    margin-top: 8px;
+    	height: 80px;
+   	 	margin-top: 8px;
 	}
 	.product_advantage_content_list{
-		margin: 30px 60px;
+		/*margin: 30px 60px;*/
 	}
 	.product_advantage_desc>p{
 		width:218px;
 	}
 	.product_advantage_desc>p{
 		font-size:13px;
-		line-height: 21px;
+		line-height: 18px;
 	}
 	.product_advantage_desc>h3{
 		font-size:15px;
 	}
+	.product_advantage_introudce{
+		width:100%;
+		height:320px;
+		background:url(../img/bg5.jpg) no-repeat;
+		background-size:100% 100%;
+		text-align: center;
+	}
+	.product_advantage_introudce_content{
+		padding: 127px 0;
+    	font-size: 16px;
+		line-height: 26px;
+	}
+	
+	
+	
+	
 }
 .pub_title{
 	text-align: center;
@@ -190,24 +253,38 @@
 .goods_pub{
 	padding-bottom:6px;
 }
-.goods_plan_list>li:nth-child(1){
-		padding:3px 0;
-}
+
 /*产品优势*/
 .product_advantage{
 		padding:40px;
 		background:#f6f6f6;
 }
 .product_advantage_content{
-	width:80%;
-	margin:0 auto;
+	/*width:80%;
+	margin:0 auto;*/
+	text-align: center;
 }
 .product_advantage_desc>h3{
 	text-align:center;
 	padding:10px;
 }
+.product_advantage_pic:hover img{
+		animation:Rotate 1s infinite;
+		-webkit-animation:Rotate 1s 1; /* Safari 和 Chrome */
+	}
+	@-webkit-keyframes Rotate /* Safari and Chrome */
+	{
+		from {transform:rotateY(0)}
+		to {transform:rotateY(360deg)}
+	}
+.product_advantage_content_list{
+	margin: 30px 0;
+    width: 33.3%;
+    text-align: center;
+    float: left;
+}
 
-
-
-
-
+.product_advantage_desc{
+	/*text-align:center;*/
+	display: inline-block;
+}

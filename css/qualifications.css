@@ -1,0 +1,51 @@
+.banner img{
+  width: 100%;
+}
+@media screen and (max-width: 1920px) {
+  .lists{
+    width: 1400px;
+    margin:0 auto;
+  }
+  .lists ul li{
+    width: 260px;
+    margin-right: 25px;
+  }
+  .lists ul li img{
+    width: 260px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .lists{
+    width: 1200px;
+    margin:0 auto;
+  }
+  .lists ul li{
+    width: 220px;
+  }
+  .lists ul li img{
+    width: 220px;
+  }
+}
+.lists{
+  padding-top: 25px;
+}
+.lists ul{
+  min-height: 2172px;
+}
+.lists ul li{
+  float: left;
+  position: relative;
+  top: 50px;
+  opacity: 0;
+}
+.lists ul li:nth-child(5n){
+  margin-right: 0 !important;
+}
+.lists ul li p{
+  width: 70%;
+  height: 40px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 14px;
+  color:#646464;
+}
